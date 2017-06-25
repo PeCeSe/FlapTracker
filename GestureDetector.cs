@@ -180,6 +180,10 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                 {
                                     // update the GestureResultView object with new gesture result values
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                                    if(result.Detected && result.Confidence > 0.8)
+                                    {
+                                        WebClient.alertFlapDetected();
+                                    }
                                 }
                             }
                         }

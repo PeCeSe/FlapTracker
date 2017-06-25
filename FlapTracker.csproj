@@ -116,6 +116,7 @@
     </Compile>
     <Compile Include="GestureDetector.cs" />
     <Compile Include="GestureResultView.cs" />
+    <Compile Include="WebClient.cs" />
     <Compile Include="KinectBodyView.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
