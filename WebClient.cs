@@ -13,7 +13,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         public static void alertFlapDetected()
         {
             var request = (HttpWebRequest)WebRequest.Create("http://localhost:3000/flap");
-            request.Method = "PUT";
+            request.Method = "GET";
             request.ContentType = "application/xml";
 
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
