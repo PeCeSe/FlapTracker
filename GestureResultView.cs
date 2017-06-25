@@ -19,10 +19,10 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     public sealed class GestureResultView : INotifyPropertyChanged
     {
         /// <summary> Image to show when the 'detected' property is true for a tracked body </summary>
-        private readonly ImageSource seatedImage = new BitmapImage(new Uri(@"Images\Seated.png", UriKind.Relative));
+        private readonly ImageSource flapImage = new BitmapImage(new Uri(@"Images\FlapImage.png", UriKind.Relative));
 
         /// <summary> Image to show when the 'detected' property is false for a tracked body </summary>
-        private readonly ImageSource notSeatedImage = new BitmapImage(new Uri(@"Images\NotSeated.png", UriKind.Relative));
+        private readonly ImageSource noFlapImage = new BitmapImage(new Uri(@"Images\NoFlapImage.png", UriKind.Relative));
 
         /// <summary> Image to show when the body associated with the GestureResultView object is not being tracked </summary>
         private readonly ImageSource notTrackedImage = new BitmapImage(new Uri(@"Images\NotTracked.png", UriKind.Relative));
@@ -214,11 +214,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 if (this.Detected)
                 {
                     this.Confidence = detectionConfidence;
-                    this.ImageSource = this.seatedImage;
+                    this.ImageSource = this.flapImage;
                 }
                 else
                 {
-                    this.ImageSource = this.notSeatedImage;
+                    this.ImageSource = this.noFlapImage;
                 }
             }
         }
